@@ -1,10 +1,10 @@
 "use client";
 import { useMemo } from "react";
 import { usePathname } from "next/navigation";
-
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import React from "react";
+
 interface SidebarProps {
   children: React.ReactNode;
 }
@@ -28,7 +28,18 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
         href: "/search",
       },
     ],
-    []
+    [pathname]);
+    return (
+      <div className="flex h-full">
+        <div  className='hidden md:Flex'>
+          <Box>
+            
+          </Box>
+         
+        </div>
+
+      </div>
+    )
   );
 };
 
